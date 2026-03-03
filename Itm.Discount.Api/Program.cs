@@ -18,4 +18,9 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.MapGet("/api/discounts/{code}", (string code) =>
+{
+    // Lógica para obtener el descuento por código
+});
+
 app.Run();

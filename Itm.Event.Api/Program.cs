@@ -18,4 +18,9 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.MapPost("/api/bookings", () =>
+{
+    // Lógica para crear una nueva reserva
+});
+
 app.Run();
