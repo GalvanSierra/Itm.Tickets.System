@@ -1,3 +1,5 @@
+using Itm.Event.Api.DTOs;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -18,9 +20,19 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.MapPost("/api/bookings", () =>
+app.MapGet("/api/events/{id}", (int id) =>
 {
-    // Lógica para crear una nueva reserva
+    // Lógica para obtener la lista de eventos
+});
+
+app.MapPost("/api/events/reserve", () =>
+{
+    // Lógica para reservar un evento
+});
+
+app.MapPost("/api/events/release", () =>
+{
+    // Lógica para liberar una reserva de evento
 });
 
 app.Run();
